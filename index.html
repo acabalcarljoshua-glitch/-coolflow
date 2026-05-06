@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoolFlow 2.0</title>
+<link rel="icon" type="image/png" href="logo.png">
+
+<style>html {
+  scroll-behavior: smooth;
+}
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #05070a;
+  color: #fff;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav h1 {
+  color: #bfff00;
+}
+
+nav a {
+  color: #ccc;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #bfff00;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  position: relative;
+  background: linear-gradient(270deg, #000, #1a1a00, #bfff00, #000);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: #bfff00;
+}
+
+.hero p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background: #bfff00;
+  color: #000;
+  font-weight: bold;
+}
+
+/* SECTION */
+section {
+  padding: 100px 60px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* VIDEO CARDS */
+.videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 20px;
+}
+
+.video-card {
+  height: 200px;
+  background: #111;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bfff00;
+  font-size: 20px;
+}
+
+/* CONTACT */
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: #111;
+  color: white;
+}
+
+.contact button {
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+ <div style="display:flex; align-items:center; gap:10px;">
+  <img src="logo.png" style="width:45px; height:45px; border-radius:50%; object-fit:cover;">
+  <h1>COOL FLOW</h1>
+</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#photos">Photos</a>
+    <a href="#videos">Videos</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.youtube.com/@coolflow27" target="_blank">YouTube</a>
+    <a href="https://www.facebook.com/CoolFlow27" target="_blank">Facebook</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <div class="hero-content">
+    <h2>Lost in the <span>music</span>,<br>found in the <span>moment</span></h2>
+    <p>Cinematic visuals that capture your best memories.</p>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="photos" id="photos">
+  <h2 style="margin-bottom:20px;">Photos</h2>
+  <div class="gallery">
+    <img src="675885940_956643557096430_5865852706596580071_n.jpg">
+    <img src="615215103_878268421600611_3368549626477005760_n.jpg">
+    <img src="605783771_869345682492885_6850191287213279665_n.jpg">
+    <img src="605638001_869345739159546_7793970632796668616_n.jpg">
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <h2 style="margin-bottom:20px;">Videos</h2>
+  <div class="videos">
+
+    <a href="https://www.youtube.com/watch?v=uzgveTPOT5o" target="_blank" style="text-decoration:none;">
+      <div class="video-card" style="background-image: url('https://img.youtube.com/vi/uzgveTPOT5o/hqdefault.jpg'); background-size:cover; background-position:center; position:relative;">
+        <div style="position:absolute; inset:0; background:rgba(0,0,0,0.4); border-radius:15px;"></div>
+        <span style="position:relative; z-index:1; font-size:40px;">▶</span>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=Qw-fSrTHycY" target="_blank" style="text-decoration:none;">
+      <div class="video-card" style="background-image: url('https://img.youtube.com/vi/Qw-fSrTHycY/hqdefault.jpg'); background-size:cover; background-position:center; position:relative;">
+        <div style="position:absolute; inset:0; background:rgba(0,0,0,0.4); border-radius:15px;"></div>
+        <span style="position:relative; z-index:1; font-size:40px;">▶</span>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=BrhBYf4gvQg" target="_blank" style="text-decoration:none;">
+      <div class="video-card" style="background-image: url('https://img.youtube.com/vi/BrhBYf4gvQg/hqdefault.jpg'); background-size:cover; background-position:center; position:relative;">
+        <div style="position:absolute; inset:0; background:rgba(0,0,0,0.4); border-radius:15px;"></div>
+        <span style="position:relative; z-index:1; font-size:40px;">▶</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Send a Message</h2>
+
+  <!-- Phone -->
+  <p style="color:#aaa; margin:10px 0 5px;">📞 Phone</p>
+  <a href="tel:09155107130" style="color:#bfff00; text-decoration:none;">0915 510 7130</a>
+
+  <!-- Email -->
+  <p style="color:#aaa; margin:15px 0 5px;">✉️ Email</p>
+  <a href="mailto:hga_hem@yahoo.com" style="color:#bfff00; text-decoration:none;">hga_hem@yahoo.com</a>
+
+  <!-- Messenger -->
+  <p style="color:#aaa; margin:15px 0 5px;">💬 Messenger</p>
+  <a href="https://m.me/CoolFlow27" target="_blank" style="color:#bfff00; text-decoration:none;">Message on Messenger</a>
+
+  <!-- Form -->
+  <p style="color:#aaa; margin:25px 0 10px;">Or send a message directly:</p>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea rows="5" placeholder="Your Message"></textarea>
+  <a href="mailto:hga_hem@yahoo.com">
+    <button class="btn">Send Message</button>
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 CoolFlow. All rights reserved.
+</footer>
+
+</body>
+</html>
